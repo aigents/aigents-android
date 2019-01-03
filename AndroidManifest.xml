@@ -60,7 +60,7 @@
         android:label="@string/aigents_app" 
         android:icon="@drawable/aigent"
         android:allowBackup="true"
-        android:theme="@android:style/Theme.Black.NoTitleBar" 
+        android:theme="@android:style/Theme.Light.NoTitleBar" 
         android:description="@string/aigents_desc">
         
         <!-- An Activity in the application - this is something the user

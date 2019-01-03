@@ -28,14 +28,14 @@
     <string name="del">Delete</string>
     <string name="edit">Edit</string>
     <string name="open">Open</string>
-    <string name="thing">Thing</string>
-    <string name="things">Things</string>
+    <string name="thing">Topic</string>
+    <string name="things">Topics</string>
     <string name="site">Site</string>
     <string name="sites">Sites</string>
     <string name="news">News</string>
-    <string name="peer">Peer</string>
-    <string name="peers">Peers</string>
-    <string name="talks">Talks</string>
+    <string name="peer">Friend</string>
+    <string name="peers">Friends</string>
+    <string name="talks">Chat</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     

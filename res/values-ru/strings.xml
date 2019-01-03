@@ -33,9 +33,9 @@
     <string name="site">Сайт</string>
     <string name="sites">Сайты</string>
     <string name="news">Новости</string>
-    <string name="peer">Другой</string>
-    <string name="peers">Другие</string>
-    <string name="talks">Беседа</string>
+    <string name="peer">Друг</string>
+    <string name="peers">Друзья</string>
+    <string name="talks">Чат</string>
     <string name="ok">Да</string>
     <string name="cancel">Нет</string>
     

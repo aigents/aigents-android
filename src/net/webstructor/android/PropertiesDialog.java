@@ -30,6 +30,7 @@ import net.webstructor.al.Writer;
 import net.webstructor.android.R;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -81,6 +82,7 @@ public class PropertiesDialog implements DataRequestor {
 	        ll.setLayoutParams(ll_params);
 	        for (int i = 0; i < names.length; i++) {
 	        	TextView tv = new TextView(activity);
+	        	tv.setTextColor(Color.LTGRAY);
 	        	String label;
 	        	if (resources != null) //if explicitly given resource ids
 	        		label = activity.getString(resources[i]);
@@ -117,7 +119,7 @@ public class PropertiesDialog implements DataRequestor {
 	            ll.addView(et);
 	        }
 	        sv.addView(ll);
-	        View view = sv;	        
+	        View view = sv;	 
 	        android.app.AlertDialog d = new AlertDialog.Builder(activity)
 	            .setIcon(iconid)
 	            .setTitle(titleid)
