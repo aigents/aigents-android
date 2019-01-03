@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="aigents_app">Aigents</string>
+    <string name="aigents_free_app">Aigents Free Trial</string>
+    <string name="back">Назад</string>
+    <string name="say">Сказать</string>
+    <string name="clear">Очистить</string>
+    <string name="add">Добавить</string>
+    <string name="del">Удалить</string>
+    <string name="edit">Править</string>
+    <string name="open">Открыть</string>
+    <string name="thing">Тема</string>
+    <string name="things">Темы</string>
+    <string name="site">Сайт</string>
+    <string name="sites">Сайты</string>
+    <string name="news">Новости</string>
+    <string name="peer">Другой</string>
+    <string name="peers">Другие</string>
+    <string name="talks">Беседа</string>
+    <string name="ok">Да</string>
+    <string name="cancel">Нет</string>
+    
+    <!-- This is a complex string containing style runs. -->
+    <string name="aigents_desc">Даем каждому пользователю интернета индивидуального обучаемого программного агента для автоматического интеллектуального поиска информации в сети и обмена ей с другими пользователями – индивидуально или в свободно создаваемых сообществах. Помогаем людям вовремя находить информацию, нужную именно им.</string>
+    <string name="hint_enter_text">Вводи текст здесь</string>
+    <string name="input_text">Ввод</string>
+    <string name="input_search_text">Ввод или поиск</string>
+    <string name="search_text">Поиск</string>
+    <string name="your_props">Твои свойства</string>
+    <string name="my_props">Мои свойства</string>
+    <string name="aigents_news"> новости Aigents</string>
+    <string name="follow_aigents">Выбери и следи за Aigents.</string>
+    <string name="_has_no_email_no_phone">" - нет телефона и email."</string>
+    <string name="_is_getting_your_news">" получает твои новости."</string>
+    <string name="_is_not_getting_your_news">" не получает твои новости."</string>
+    
+    <!-- AL schema properties -->
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="email">Email</string>
+    <string name="birth_date">День рождения</string>
+    <string name="secret_question">Тайный вопрос</string>
+    <string name="secret_answer">Тайный ответ</string>
+    <string name="check_cycle">Частота проверок</string>
+    <string name="retention_period">Период хранения</string>
+    
+</resources>
+

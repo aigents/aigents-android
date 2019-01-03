@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="aigents_app">Aigents</string>
+    <string name="aigents_free_app">Aigents Free Trial</string>
+    <string name="back">后</string>
+    <string name="say">说</string>
+    <string name="clear">明确</string>
+    <string name="add">添加</string>
+    <string name="del">删除</string>
+    <string name="edit">编辑</string>
+    <string name="open">开放</string>
+    <string name="thing">主题</string>
+    <string name="things">主题</string>
+    <string name="site">现场</string>
+    <string name="sites">现场</string>
+    <string name="news">新闻</string>
+    <string name="peer">其他</string>
+    <string name="peers">其他</string>
+    <string name="talks">谈话</string>
+    <string name="ok">行</string>
+    <string name="cancel">取消</string>
+    
+    <!-- This is a complex string containing style runs. -->
+    <string name="aigents_desc">给个人软件代理给每个互联网用户。让这个代理被训练了在网络上的信息智能搜索。与私下或在封闭或开放社区的其他用户共享信息。让人们找到信息，他们需要准确，及时，不重复搜索。</string>
+    <string name="hint_enter_text">在这里输入你的输入</string>
+    <string name="input_text">输入文本</string>
+    <string name="input_search_text">输入或搜索文本</string>
+    <string name="search_text">搜索文本</string>
+    <string name="your_props">你的属性</string>
+    <string name="my_props">我的属性</string>
+    <string name="aigents_news">Aigents新闻</string>
+    <string name="follow_aigents">按跟随Aigents。</string>
+    <string name="_has_no_email_no_phone">" 有没有电子邮件，没有电话。"</string>
+    <string name="_is_getting_your_news">"是让你的消息。"</string>
+    <string name="_is_not_getting_your_news">"是不是让你的消息。"</string>
+
+    <!-- AL schema properties -->
+    <string name="name">名字</string>
+    <string name="surname">姓</string>
+    <string name="email">电子邮件</string>
+    <string name="birth_date">出生日期</string>
+    <string name="secret_question">安全问题</string>
+    <string name="secret_answer">揭秘答案</string>
+    <string name="check_cycle">检查周期</string>
+    <string name="retention_period">保存期限</string>
+    
+</resources>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="aigents_app">Aigents</string>
+    <string name="aigents_free_app">Aigents Free Trial</string>
+    <string name="back">Vor</string>
+    <string name="say">Sagen</string>
+    <string name="clear">Sauber</string>
+    <string name="add">Dddieren</string>
+    <string name="del">Löschen</string>
+    <string name="edit">Richten</string>
+    <string name="open">Geöffnet</string>
+    <string name="thing">Thema</string>
+    <string name="things">Topics</string>
+    <string name="site">Seite</string>
+    <string name="sites">Seites</string>
+    <string name="news">Nachricht</string>
+    <string name="peer">Andere</string>
+    <string name="peers">Andere</string>
+    <string name="talks">Dialog</string>
+    <string name="ok">Ja</string>
+    <string name="cancel">Nein</string>
+    
+    <!-- This is a complex string containing style runs. -->
+    <string name="aigents_desc">Geben Sie jedem Internet-Nutzer eine individuelle lernfähigen Software-Agent für die intelligente Suche von Informationen über das Internet und den Austausch mit anderen Benutzern privat oder in geschlossenen oder offenen Gemeinschaften. Lassen Sie die Menschen finden Informationen, die sie genau und rechtzeitig brauchen, ohne von irrelevanten Anzeigen Belastung und wiederholte Suchanfragen.</string>
+    <string name="hint_enter_text">Hier Eingeben</string>
+    <string name="input_text">Eingang</string>
+    <string name="input_search_text">Eingeben und Suchen</string>
+    <string name="search_text">Suche</string>
+    <string name="your_props">Ihre Qualitäten</string>
+    <string name="my_props">Meine Qualität</string>
+    <string name="aigents_news"> Aigents Nachricht</string>
+    <string name="follow_aigents">Wählen Sie und befolgen Aigents.</string>
+    <string name="_has_no_email_no_phone">" - kein Telefon und E-Mail."</string>
+    <string name="_is_getting_your_news">" bringt Ihre Nachrichten."</string>
+    <string name="_is_not_getting_your_news">" nicht bekommen Ihre Nachrichten."</string>
+    
+    <!-- AL schema properties -->
+    <string name="name">Name</string>
+    <string name="surname">Nachname</string>
+    <string name="email">E-Mail</string>
+    <string name="birth_date">Geburtstag</string>
+    <string name="secret_question">Sicherheitsfrage</string>
+    <string name="secret_answer">Geheime Antwort</string>
+    <string name="check_cycle">die Häufigkeit der Inspektionen</string>
+    <string name="retention_period">Speichern Zeitraum</string>
+    
+</resources>
+

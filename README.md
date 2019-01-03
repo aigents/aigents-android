@@ -1,2 +1,3 @@
 # aigents-android
-Aigents Android Client
+Aigents Android Application
+https://aigents.com/

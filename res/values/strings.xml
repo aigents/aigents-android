@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- This file contains resource definitions for displayed strings, allowing
+     them to be changed based on the locale and options. -->
+
+<resources>
+    <!-- Simple strings. -->
+    <string name="aigents_app">Aigents</string>
+    <string name="aigents_free_app">Aigents Free Trial</string>
+    <string name="back">Back</string>
+    <string name="say">Say</string>
+    <string name="clear">Clear</string>
+    <string name="add">Add</string>
+    <string name="del">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="open">Open</string>
+    <string name="thing">Thing</string>
+    <string name="things">Things</string>
+    <string name="site">Site</string>
+    <string name="sites">Sites</string>
+    <string name="news">News</string>
+    <string name="peer">Peer</string>
+    <string name="peers">Peers</string>
+    <string name="talks">Talks</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- This is a complex string containing style runs. -->
+    <string name="aigents_desc">Give each internet user an individual trainable software agent for intelligent search of information on the web and sharing it with other users privately or within closed or open communities. Let people find information that they need precisely and timely, without of irrelevant ads burden and repetitive searches.</string>
+    <string name="hint_enter_text">Enter your input here</string>
+    <string name="input_text">Input text</string>
+    <string name="input_search_text">Input or search text</string>
+    <string name="search_text">Search text</string>
+    <string name="your_props">Your properties</string>
+    <string name="my_props">My properties</string>
+    <string name="aigents_news">Aigents news</string>
+    <string name="follow_aigents">Press to follow Aigents.</string>
+    <string name="_has_no_email_no_phone">" has no email, no phone."</string>
+    <string name="_is_getting_your_news">" is getting your news."</string>
+    <string name="_is_not_getting_your_news">" is not getting your news."</string>
+
+    <!-- AL schema properties -->
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="email">Email</string>
+    <string name="birth_date">Birth date</string>
+    <string name="secret_question">Secret question</string>
+    <string name="secret_answer">Secret answer</string>
+    <string name="check_cycle">Check cycle</string>
+    <string name="retention_period">Retention period</string>
+    
+</resources>
+

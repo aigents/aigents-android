@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/eyes_normal" android:duration="10000" />
+    <item android:drawable="@drawable/eyes_sleep" android:duration="200" />
+    <item android:drawable="@drawable/eyes_small" android:duration="10000" />
+    <item android:drawable="@drawable/eyes_sleep" android:duration="200" />
+    <item android:drawable="@drawable/eyes_large" android:duration="10000" />
+    <item android:drawable="@drawable/eyes_sleep" android:duration="200" />
+    <item android:drawable="@drawable/eyes_down" android:duration="300" />
+    <item android:drawable="@drawable/eyes_left" android:duration="300" />
+    <item android:drawable="@drawable/eyes_up" android:duration="300" />
+    <item android:drawable="@drawable/eyes_right" android:duration="300" />
+    <item android:drawable="@drawable/eyes_sleep" android:duration="200" />
+</animation-list>

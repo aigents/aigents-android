@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TODO: animation
+	<ImageView
+        android:id="@+id/image"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" />
+	-->
+	
+<!--
+	    android:gravity="center"
+	    android:scaleType="center" />
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+</LinearLayout>	
+-->	
+		
+    <!-- things tab -->
+	<LinearLayout
+	  android:id="@+id/things"
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent" >
+	  <ListView
+	    android:id="@+id/things_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:clickable="true"
+	    android:layout_weight="1.0">
+		</ListView>
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    style="@android:style/ButtonBar">
+	        <EditText
+	            android:id="@+id/things_input"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/input_search_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	          	<!-- <requestFocus /> -->
+	    	</EditText>
+		    <ImageButton android:id="@+id/things_add"
+	    		android:src="@drawable/add" 
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+		        android:gravity="center_vertical"
+	    		android:contentDescription="@string/add"/>
+	  </LinearLayout>
+	</LinearLayout>	
+    
+	<LinearLayout
+	  android:id="@+id/sites"
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent" >
+	  <ListView
+	    android:id="@+id/sites_list"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:layout_weight="1.0" />	  
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    style="@android:style/ButtonBar">
+	        <EditText
+	            android:id="@+id/sites_input"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/input_search_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	          	<!-- <requestFocus /> -->
+	    	</EditText>
+		    <ImageButton android:id="@+id/sites_add"
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+		        android:gravity="center_vertical"
+	    		android:src="@drawable/add" 
+	    		android:contentDescription="@string/add" />
+	  </LinearLayout>
+	</LinearLayout>	
+    
+	<!-- news tab -->
+	<LinearLayout
+	  android:id="@+id/news"
+	  android:orientation="vertical"
+	  android:layout_width="fill_parent"
+	  android:layout_height="fill_parent" >
+	  	<ListView
+	    	android:id="@+id/news_list"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="0dip"
+	    	android:layout_weight="1.0" />	  
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    style="@android:style/ButtonBar">
+	        <EditText
+	            android:id="@+id/news_input"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/search_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	    	</EditText>
+	  	</LinearLayout>
+	</LinearLayout>	
+    
+    <!-- peers tab -->
+	<LinearLayout
+	  	android:id="@+id/peers"
+	  	android:orientation="vertical"
+	  	android:layout_width="fill_parent"
+	  	android:layout_height="fill_parent" >
+	  	<ListView
+	    	android:id="@+id/peers_list"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="0dip"
+	    	android:layout_weight="1.0" />
+		<LinearLayout
+			android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    style="@android:style/ButtonBar">
+	        <EditText
+	            android:id="@+id/peers_input"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/search_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	    	</EditText>
+	  	</LinearLayout>
+	</LinearLayout>	
+	
+    <!-- talks tab -->
+	<LinearLayout android:id="@+id/talks"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+	    <!-- eyes animation
+		<LinearLayout
+		        android:orientation="vertical" 
+		        android:layout_width="fill_parent"
+	    		android:layout_height="38px"
+		        android:gravity="center">    
+		    <ImageView
+		        android:id="@+id/image"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:scaleType="center" />
+		</LinearLayout>
+		-->
+		<!-- converstion log -->
+<!--  		
+	    <EditText
+	        android:id="@+id/talks_log"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dip"
+	        android:layout_weight="1"
+	        android:autoText="true"
+	        android:capitalize="sentences"
+	        android:freezesText="true"
+	        android:gravity="bottom"
+	        android:inputType="none" >
+	    </EditText>
+-->	    
+<!-- 	
+	    <EditText
+	        android:id="@+id/talks_log"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="0dip"
+	        android:gravity="bottom"
+	    	android:layout_weight="1.0"
+	    	android:ellipsize="end"
+	    	android:inputType="none" >
+	    </EditText>
+  -->
+	    <TextView
+	        android:id="@+id/talks_log"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="0dip"
+	        android:gravity="bottom"
+	    	android:layout_weight="1.0"
+	    	android:scrollbars = "vertical"
+	    	android:inputType="none" >
+	    </TextView>
+<!--  -->    	    
+	    <LinearLayout
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical" 
+	        android:gravity="center_horizontal"
+	        android:orientation="horizontal"
+	        style="@android:style/ButtonBar">
+	        <!-- android:background="@drawable/semi_black" -->
+	        <EditText
+	            android:id="@+id/talks_input"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/input_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	          	<requestFocus />
+	    	</EditText>
+	    	<!--  say button -->
+	        <ImageButton android:id="@+id/say"
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+	    		android:src="@drawable/add" 
+	    		android:contentDescription="@string/say" />
+	        <!--  clear button
+	    	<ImageButton
+	    	    android:id="@+id/del"
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+	    		android:src="@drawable/del" 
+	    		android:contentDescription="@string/del" />
+	    	 -->
+	    </LinearLayout>	
+	</LinearLayout>
+        
+</FrameLayout>
+
+<!--
+</LinearLayout>
+-->

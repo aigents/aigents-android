@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/semi_black">
+        <!--
+	        <EditText
+	            android:id="@+id/web_site"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/input_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	    	</EditText>
+	      -->
+        <TextView android:id="@+id/web_site"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+            android:singleLine="true"
+			android:autoLink="web"
+    		android:longClickable="true" />
+    </LinearLayout>
+    
+    <WebView
+    	android:id="@+id/webview"
+    	android:layout_width="fill_parent"
+	    android:layout_height="0dip"
+	    android:gravity="bottom"
+	    android:layout_weight="1.0"
+	    android:scrollbars = "vertical|horizontal"
+	    android:inputType="none" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/semi_black">
+
+	        <EditText
+	            android:id="@+id/web_text"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:ems="10"
+	            android:hint="@string/input_text"
+	            android:singleLine = "true"
+	            android:lines="1"
+	            android:maxLines="1">
+	          	<requestFocus />
+	    	</EditText>
+	    	<!--  say button -->
+	        <ImageButton android:id="@+id/web_add"
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+		        android:gravity="center_vertical"
+	    		android:src="@drawable/add" 
+	    		android:contentDescription="@string/say" />
+	        <!--  clear button -->
+	    	<ImageButton
+	    	    android:id="@+id/web_del"
+	    		android:layout_width="45dip"
+	    		android:layout_height="45dip"
+		        android:gravity="center_vertical"
+	    		android:src="@drawable/del" 
+	    		android:contentDescription="@string/del" />
+        
+    </LinearLayout>
+
+</LinearLayout>
+
+
