@@ -149,7 +149,7 @@ public class WebProfiler {
 			if (!AL.empty(trusts)) {
 				Thing peer = (Thing)trusts.iterator().next();
 				//do the rest only for one peer trusted by self as found above
-				int history_days = cell.retentionDays();
+				int history_days = cell.attentionDays();
 				resyncProfile(cell.service,history_days);
 				for (String search : searches) {
 					Collection things = cell.storager.getNamed(search);
@@ -200,20 +200,20 @@ public class WebProfiler {
 		long current_time = System.currentTimeMillis();
 		try {
 			if ((current_time - last_check) > check_cycle) {
-				self = new Propertor("your",new String[]{Body.retention_period});
+				self = new Propertor("your",new String[]{Body.attention_period});
 				activity.mTalker.request(self,self.updateRequest());
 				//self.waitNotified();
-				String self_retention_period = self.map.get(Body.retention_period);
-				int retention_period_days = AL.empty(self_retention_period) ? 0 : new Period(self_retention_period).getDays();
-				if (retention_period_days < 3)
-					retention_period_days = 3;
+				String self_attention_period = self.map.get(Body.attention_period);
+				int attention_period_days = AL.empty(self_attention_period) ? 0 : new Period(self_attention_period).getDays();
+				if (attention_period_days < 3)
+					attention_period_days = 3;
 				user = new Propertor("my",new String[]{Peer.check_cycle});
 				activity.mTalker.request(user,user.updateRequest());
 				//user.waitNotified();
 				check_cycle = new Period(user.map.get(Peer.check_cycle)).getMillis();
 				if (check_cycle < Period.HOUR)
 					check_cycle = Period.HOUR;
-				resyncProfile(activity,retention_period_days);
+				resyncProfile(activity,attention_period_days);
 				last_check = current_time;
 				activity.mTalker.request(null,"My sites "+propList(bookmarks)+".");
 				activity.mTalker.request(null,"My knows "+propList(searches)+".");

@@ -30,7 +30,9 @@ import net.webstructor.agent.Body;
 import net.webstructor.agent.Farm;
 import net.webstructor.al.Period;
 import net.webstructor.self.Siter;
+import android.app.ActivityManager;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
@@ -48,6 +50,19 @@ class Cell extends Farm {
 		//enable all except logger and console, 2 conversationers to enable console attachments
 		super(new String[]{},false,false,true,true,true,false,2);//no social
 		this.service = service;
+	}
+	
+	@Override
+	public int checkMemory(){//in range 0-100 percents
+	    ActivityManager activityManager = (ActivityManager) service.getSystemService(Context.ACTIVITY_SERVICE);
+	    ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+	    activityManager.getMemoryInfo(memoryInfo);//in bytes, total system-wide
+	    //https://developer.android.com/topic/performance/memory#java
+	    //https://github.com/eclipse/paho.mqtt.android/issues/292
+	    //https://developer.android.com/guide/topics/manifest/application-element#largeHeap
+	    //https://developer.android.com/reference/android/app/ActivityManager#getMemoryClass()
+	    //int megabytes_available = activityManager.getMemoryClass();
+	    return memoryInfo.lowMemory || memoryInfo.availMem < memoryInfo.threshold ? 100 : 50;
 	}
 	
 	@Override
