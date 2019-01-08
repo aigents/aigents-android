@@ -41,24 +41,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="140"
     android:versionName="1.4.0"
-    package="net.webstructor.android">
+    package="net.webstructor.android.free">
 
     <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
 <!--     <uses-permission android:name="com.android.broswer.permission.WRITE_HISTORY_BOOKMARKS" />  -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17"/>
+    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="26"/>
 
     <!-- This package contains an application...  The 'label' is the name
          to display to the user for the overall application, and provides
          a default label for all following components.  The syntax here is a
          reference to one of our string resources.-->
     <application 
-        android:label="@string/aigents_app" 
-        android:icon="@drawable/aigent"
+        android:label="@string/aigents_free_app" 
+        android:icon="@drawable/aigent_free"
         android:allowBackup="true"
         android:theme="@android:style/Theme.Light.NoTitleBar" 
         android:description="@string/aigents_desc">
@@ -67,7 +66,7 @@
              can launch and interact with.  The "name" attribute is the
              name of the class within your package that implements this
              activity. -->
-        <activity android:name="net.webstructor.android.AigentsTabActivity"
+        <activity android:name="net.webstructor.android.free.AigentsTabActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             android:launchMode="singleTop"
             >

@@ -29,7 +29,7 @@ import java.util.Stack;
 import net.webstructor.al.AL;
 import net.webstructor.al.Reader;
 import net.webstructor.al.Writer;
-import net.webstructor.android.R;
+import net.webstructor.android.free.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

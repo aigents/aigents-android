@@ -30,7 +30,7 @@ import java.util.LinkedList;
 import net.webstructor.agent.Body;
 import net.webstructor.al.AL;
 import net.webstructor.al.Writer;
-import net.webstructor.android.R;
+import net.webstructor.android.free.R;
 import net.webstructor.peer.Peer;
 
 import android.app.Notification;

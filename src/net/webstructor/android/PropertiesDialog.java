@@ -27,7 +27,7 @@ import java.util.HashMap;
 
 import net.webstructor.al.AL;
 import net.webstructor.al.Writer;
-import net.webstructor.android.R;
+import net.webstructor.android.free.R;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;

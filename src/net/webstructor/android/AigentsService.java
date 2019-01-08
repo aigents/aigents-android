@@ -24,7 +24,6 @@
 package net.webstructor.android;
 
 import java.io.File;
-import java.util.ArrayList;
 
 import net.webstructor.agent.Body;
 import net.webstructor.agent.Farm;
@@ -97,6 +96,10 @@ class Cell extends Farm {
 	//http://www.tutorialspoint.com/android/android_sending_sms.htm
 	@Override
 	public void textMessage(String phone, String subject, String message) {
+		//TODO: comply with
+		//android.permission.SEND_SMS
+		//https://support.google.com/googleplay/android-developer/answer/9047303
+		/*
 		if (smsManager == null)
 			smsManager = SmsManager.getDefault();
 		//TODO: use subject
@@ -111,6 +114,7 @@ class Cell extends Farm {
 		} catch (Exception e) {
 			Log.e(AigentsTabActivity.LOG_TAG,"SMS not sent to "+phone,e);
 		}
+		*/
 	}
 	
 	//say for Android, display count of news specific to self owner (1st one trusted peer) 
