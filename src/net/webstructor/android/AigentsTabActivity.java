@@ -1,7 +1,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2014-2019 by Anton Kolonin, Aigents
+ * Copyright (c) 2014-2020 by Anton Kolonin, Aigents®
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -30,7 +30,8 @@ import java.util.LinkedList;
 import net.webstructor.agent.Body;
 import net.webstructor.al.AL;
 import net.webstructor.al.Writer;
-import net.webstructor.android.free.R;
+//import net.webstructor.android.free.R;
+import net.webstructor.android.R;
 import net.webstructor.peer.Peer;
 
 import android.app.Notification;
@@ -70,6 +71,8 @@ import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.core.content.ContextCompat;
+import android.Manifest;
 
 public class AigentsTabActivity extends TabActivity implements Apper {
 
@@ -215,8 +218,39 @@ public class AigentsTabActivity extends TabActivity implements Apper {
        try {
 	        final TabHost tabHost = getTabHost();
 	        LayoutInflater.from(this).inflate(R.layout.tabs, tabHost.getTabContentView(), true);
-	        
-	    	//TODO:animation
+
+	        //TODO PeersList permissions properly
+			//https://developer.android.com/training/permissions/requesting
+			//https://stackoverflow.com/questions/29915919/permission-denial-opening-provider-com-android-providers-contacts-contactsprovi
+			//https://stackoverflow.com/questions/2356084/read-all-contacts-phone-numbers-in-android/3
+			//https://stackoverflow.com/questions/32151603/scan-results-available-action-return-empty-list-in-android-6-0/32151901
+		   	if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
+				   != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+//TODO
+				/*
+				// Permission is not granted
+				// Should we show an explanation?
+				if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,
+						Manifest.permission.READ_CONTACTS)) {
+					// Show an explanation to the user *asynchronously* -- don't block
+					// this thread waiting for the user's response! After the user
+					// sees the explanation, try again to request the permission.
+				} else {
+					// No explanation needed, we can request the permission.
+					ActivityCompat.requestPermissions(thisActivity,
+							arrayOf(Manifest.permission.READ_CONTACTS),
+							MY_PERMISSIONS_REQUEST_READ_CONTACTS)
+
+					// MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+					// app-defined int constant. The callback method gets the
+					// result of the request.
+				}
+				 */
+			} else {
+				// Permission has already been granted
+			}
+
+		   //TODO:animation
 	        /*
 	    	//http://developer.alexanderklimov.ru/android/animation/frameanimation.php
 	        ImageView image = (ImageView)findViewById(R.id.image); 
@@ -249,7 +283,7 @@ public class AigentsTabActivity extends TabActivity implements Apper {
             });  
 	        
 	        //TODO: move somewhere	        
-	        mThingsList = createList(R.id.things_list,R.layout.list_things, "knows",
+	        mThingsList = createList(R.id.things_list,R.layout.list_things, "topics",
 		        new String[] {"name", "trust"},new int[] {R.id.things_name, R.id.things_check},
 		       	new Object[][] {},R.id.things_check,R.id.things_name,
 		       	mThingsInput = (EditText) findViewById(R.id.things_input)
@@ -330,11 +364,14 @@ public class AigentsTabActivity extends TabActivity implements Apper {
 	           }
 	        });
 	        */
-	        
+
+	        //TODO
+		   /*
 	        mPeersList = PeersAdapter.create(this);
 	        mPeersInput = (EditText)findViewById(R.id.peers_input);
 	        mPeersInput.addTextChangedListener(new Twatcher((ListView)mPeersList));
-	        
+	        */
+
 	        mTalksLog = (TextView) findViewById(R.id.talks_log);
 	        mTalksLog.setMovementMethod(new ScrollingMovementMethod());
 	        /*
@@ -364,13 +401,13 @@ public class AigentsTabActivity extends TabActivity implements Apper {
 	        registerForContextMenu(mThingsList);
 	        registerForContextMenu(mSitesList);
 	        registerForContextMenu(mNewsList);
-	        registerForContextMenu(mPeersList);
+	        //registerForContextMenu(mPeersList);
 	        registerForContextMenu(mTalksLog);
 	        
 	        getTabHost().setCurrentTab(2);//select News by default
 
 	        Log.d(LOG_TAG,"Interface created");
-	        
+
 	        //TODO: don't stop service on exit activity
 	        //http://stackoverflow.com/questions/4225847/why-remote-service-is-destroyed-when-main-activity-is-closed
 	        //Intent bindIntent = new Intent(this,AigentsService.class);
@@ -720,12 +757,32 @@ public class AigentsTabActivity extends TabActivity implements Apper {
 		if (count > 0) { //on any non-zero count, update status
 		    CharSequence info = String.valueOf(count)+" "+context.getText(R.string.aigents_news);
 		    CharSequence text = context.getText(R.string.follow_aigents);
+		    /*
 		    Notification notification = new Notification(R.drawable.aigent_btn, info, System.currentTimeMillis());
 		    //Intent intent = new Intent(this, AigentsTabActivity.class);
 		    Intent intent = new Intent(context, cls);
 		    intent.putExtra("tab", "news");
 		    PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);// PendingIntent.FLAG_UPDATE_CURRENT);
-		    notification.setLatestEventInfo(context, info, text, pending);
+			notification.setLatestEventInfo(context, info, text, pending);
+			*/
+//TODO
+			//https://stackoverflow.com/questions/32345768/cannot-resolve-method-setlatesteventinfo/33085754
+			Intent intent = new Intent(context, cls);
+			intent.putExtra("tab", "news");
+			PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);// PendingIntent.FLAG_UPDATE_CURRENT);
+			Notification.Builder builder = new Notification.Builder(context);
+			builder.setAutoCancel(false);//
+			builder.setTicker(text);
+			builder.setContentTitle(info);
+			builder.setContentText(text);
+			builder.setSmallIcon(R.drawable.aigent_btn);
+			builder.setContentIntent(pending);
+			builder.setOngoing(true);//
+			//?builder.setSubText("This is subtext..."); //  //API level 16
+			builder.setNumber(100);//TODO?
+			builder.build();
+			Notification notification = builder.getNotification();
+
 		    if (count > mPendingCount) { //sound only if more counted 
 		    	//http://stackoverflow.com/questions/4441334/how-to-play-an-android-notification-sound
 		    	//TODO: return default sound back once problem with false notifications is fixed 

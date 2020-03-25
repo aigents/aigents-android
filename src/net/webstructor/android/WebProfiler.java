@@ -1,7 +1,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2014-2019 by Anton Kolonin, Aigents
+ * Copyright (c) 2014-2020 by Anton Kolonin, Aigents®
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -40,6 +40,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.provider.Browser;
 import android.util.Log;
+import android.net.Uri;
 
 //TODO: move to webstructor?
 public class WebProfiler {
@@ -51,7 +52,27 @@ public class WebProfiler {
     static long check_cycle = Period.HOUR;//default
     static Propertor self;
     static Propertor user;
-    
+    //https://stackoverflow.com/questions/32535325/browser-bookmarks-uri-not-working-in-android-studio/33360583
+	public static final Uri BOOKMARKS_URI = Uri.parse("content://browser/bookmarks");
+	public static final Uri SEARCHES_URI = Uri.parse("content://browser/searches");
+	public static final String[] HISTORY_PROJECTION = new String[]{
+			"_id", // 0
+			"url", // 1
+			"visits", // 2
+			"date", // 3
+			"bookmark", // 4
+			"title", // 5
+			"favicon", // 6
+			"thumbnail", // 7
+			"touch_icon", // 8
+			"user_entered", // 9
+	};
+	public static final int HISTORY_PROJECTION_TITLE_INDEX = 5;
+	public static final int HISTORY_PROJECTION_URL_INDEX = 1;
+	public static final int HISTORY_PROJECTION_DATE_INDEX = 3;
+	public static final int HISTORY_PROJECTION_BOOKMARK_INDEX = 4;
+	public static final int HISTORY_PROJECTION_USER_ENTERED_INDEX = 9;
+
 	//http://developer.android.com/reference/android/provider/Browser.html
 	//http://stackoverflow.com/questions/2577084/android-read-browser-history
 	//http://www.higherpass.com/Android/Tutorials/Accessing-Data-With-Android-Cursors/3/
@@ -78,10 +99,11 @@ public class WebProfiler {
 	}
 
 	public static void getBookmarks(Context a, long since) {
-		Cursor cursor = a.getContentResolver().query(Browser.BOOKMARKS_URI, null, null, null, null);
-        final int indexUrl = cursor.getColumnIndex(Browser.BookmarkColumns.URL);
-        final int indexDate = cursor.getColumnIndex(Browser.BookmarkColumns.DATE);
-        final int indexBookmark = cursor.getColumnIndex(Browser.BookmarkColumns.BOOKMARK);
+
+		Cursor cursor = a.getContentResolver().query(BOOKMARKS_URI, null, null, null, null);
+        final int indexUrl = HISTORY_PROJECTION_URL_INDEX;//cursor.getColumnIndex(Browser.BookmarkColumns.URL);
+        final int indexDate = HISTORY_PROJECTION_DATE_INDEX;//cursor.getColumnIndex(Browser.BookmarkColumns.DATE);
+        final int indexBookmark = HISTORY_PROJECTION_BOOKMARK_INDEX;//cursor.getColumnIndex(Browser.BookmarkColumns.BOOKMARK);
 	    if (cursor.moveToFirst()) {
 	        while (!cursor.isAfterLast()) {
 	            String url = cursor.getString(indexUrl);
@@ -125,11 +147,12 @@ public class WebProfiler {
 	}
 	
 	public static void getSearches(Context a, long since) {
-		String sel = Browser.BookmarkColumns.DATE + ">" + since; 
-		Cursor cursor = a.getContentResolver().query(Browser.SEARCHES_URI, null, sel, null, null);
+		//String sel = Browser.BookmarkColumns.DATE + ">" + since;
+		String sel = "date >" + since;
+		Cursor cursor = a.getContentResolver().query(SEARCHES_URI, null, sel, null, null);
 	    if (cursor.moveToFirst()) {
 	        while (!cursor.isAfterLast()) {
-	            final int indexTerm = cursor.getColumnIndex(Browser.SearchColumns.SEARCH);
+	            final int indexTerm = HISTORY_PROJECTION_USER_ENTERED_INDEX;//cursor.getColumnIndex(Browser.SearchColumns.SEARCH);
 	           // String date = cursor.getString(indexDate);
 	            String term = cursor.getString(indexTerm);
 	            if (!AL.empty(term))
@@ -156,7 +179,7 @@ public class WebProfiler {
 					if (AL.empty(things)) {
 						Thing t = new Thing(search);
 						t.store(cell.storager);
-						peer.addThing(AL.knows, t);
+						peer.addThing(AL.topics, t);
 						peer.addThing(AL.trusts, t);
 					}
 				}
@@ -216,7 +239,7 @@ public class WebProfiler {
 				resyncProfile(activity,attention_period_days);
 				last_check = current_time;
 				activity.mTalker.request(null,"My sites "+propList(bookmarks)+".");
-				activity.mTalker.request(null,"My knows "+propList(searches)+".");
+				activity.mTalker.request(null,"My topics "+propList(searches)+".");
 				activity.mTalker.request(null,"My sites "+propList(visits)+".");
 				return true;
 			}

@@ -27,7 +27,8 @@ import java.util.HashMap;
 
 import net.webstructor.al.AL;
 import net.webstructor.al.Writer;
-import net.webstructor.android.free.R;
+//import net.webstructor.android.free.R;
+import net.webstructor.android.R;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -101,13 +102,13 @@ class PeersAdapter extends SimpleCursorAdapter implements OnClickListener, DataR
        peers.setAdapter(adapter);
        peers.setItemsCanFocus(false);//TODO:why?
        peers.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-       
+
        adapter.setFilterQueryProvider(new FilterQueryProvider() {
            public Cursor runQuery(CharSequence constraint) {
                return getContacts(activity,constraint);
            }
        });
-       
+
        return peers;
 	}
 	

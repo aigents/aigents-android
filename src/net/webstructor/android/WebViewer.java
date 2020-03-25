@@ -1,7 +1,7 @@
 /*
  * MIT License
  * 
- * Copyright (c) 2014-2019 by Anton Kolonin, Aigents
+ * Copyright (c) 2014-2020 by Anton Kolonin, Aigents®
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,7 +29,8 @@ import java.util.Stack;
 import net.webstructor.al.AL;
 import net.webstructor.al.Reader;
 import net.webstructor.al.Writer;
-import net.webstructor.android.free.R;
+//import net.webstructor.android.free.R;
+import net.webstructor.android.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -164,7 +165,7 @@ public class WebViewer extends Activity {
         			//create trusted thing-pattern and site
         			? "My sites "+Writer.toString(site)+"."+
                     	" "+Writer.toString(site)+" trust true."+
-                    	" My knows "+Writer.toString(text)+"."+
+                    	" My topics "+Writer.toString(text)+"."+
                     	" "+Writer.toString(text)+" trust true."
                     //create trusted news-item and site
         			: "There "+AL.buildQualifier(

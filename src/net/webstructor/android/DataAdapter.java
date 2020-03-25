@@ -32,7 +32,8 @@ import java.util.Locale;
 import net.webstructor.al.AL;
 import net.webstructor.al.Time;
 import net.webstructor.al.Writer;
-import net.webstructor.android.free.R;
+//import net.webstructor.android.free.R;
+import net.webstructor.android.R;
 import net.webstructor.util.Array;
 
 import android.annotation.SuppressLint;
