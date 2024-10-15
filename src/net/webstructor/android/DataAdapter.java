@@ -253,7 +253,7 @@ abstract class DataAdapter extends SimpleAdapter implements DataRequestor {
 			//for (int i=0; i<names.length; i++) {
 				//if (i > 0)
 				//	sb.append(AL.lister[0]).append(AL.space);
-				sb.append(AL.not[1]).append(AL.space);
+				sb.append(AL.no[1]).append(AL.space);
 				Writer.toString(sb,objectQualifier(o));        				
 			//}
 			sb.append(AL.period);

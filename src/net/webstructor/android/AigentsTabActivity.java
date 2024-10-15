@@ -71,7 +71,7 @@ import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.core.content.ContextCompat;
+//import androidx.core.content.ContextCompat;
 import android.Manifest;
 
 public class AigentsTabActivity extends TabActivity implements Apper {
@@ -224,10 +224,10 @@ public class AigentsTabActivity extends TabActivity implements Apper {
 			//https://stackoverflow.com/questions/29915919/permission-denial-opening-provider-com-android-providers-contacts-contactsprovi
 			//https://stackoverflow.com/questions/2356084/read-all-contacts-phone-numbers-in-android/3
 			//https://stackoverflow.com/questions/32151603/scan-results-available-action-return-empty-list-in-android-6-0/32151901
+//TODO
+		    /*
 		   	if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS)
 				   != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-//TODO
-				/*
 				// Permission is not granted
 				// Should we show an explanation?
 				if (ActivityCompat.shouldShowRequestPermissionRationale(thisActivity,
@@ -245,10 +245,10 @@ public class AigentsTabActivity extends TabActivity implements Apper {
 					// app-defined int constant. The callback method gets the
 					// result of the request.
 				}
-				 */
 			} else {
 				// Permission has already been granted
 			}
+			*/
 
 		   //TODO:animation
 	        /*
